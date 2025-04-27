@@ -29,6 +29,7 @@ function forward(n)
       else
          turtle.placeDown()
       end
+      turtle.suckDown()
       turtle.forward()
    end
 end
