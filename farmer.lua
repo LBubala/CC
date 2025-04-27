@@ -22,8 +22,10 @@ function forward(n)
    for i=1,n do
       local success, data = turtle.inspectDown()
       if success then
-         if data.name == "minecraft:wheat" and data.state.age ==7 then
+         if data.name == "minecraft:wheat" and data.state.age == 7 then
             turtle.digDown()
+            turtle.placeDown()
+         else
             turtle.placeDown()
          end
       end
