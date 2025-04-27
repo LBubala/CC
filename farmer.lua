@@ -12,13 +12,14 @@ end
 function startHarvesting()
    for col=1,colSize do
       refuel()
-      forward()
+      forward(rowSize)
       chooseDirection()
    end
+   goHome()
 end
 
-function forward()
-   for i=1,rowSize do
+function forward(n)
+   for i=1,n do
       turtle.forward()
    end
 end
@@ -41,6 +42,12 @@ function refuel()
    if turtle.getFuelLevel() < 10 then
       turtle.refuel()
    end
+end
+
+function goHome()
+   turtle.turnRight()
+   forward(4)
+   turtle.turnLeft()
 end
 
 Start()
