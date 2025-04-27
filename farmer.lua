@@ -1,16 +1,15 @@
 local colSize = 4
 local rowSize = 11
-local isFloded = true
-local startX, startY, StartZ = 0, 0, 0
+local isFlooded = true
+local startX, startY, startZ = 0, 0, 0
 local leftDirection = true
 
 function Start()
    print("Start")
-   startHarwesting()
+   startHarvesting()
 end
 
-function startHarwesting()
-   local col
+function startHarvesting()
    for col=1,colSize do
       refuel()
       forward()
