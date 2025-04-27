@@ -11,7 +11,7 @@ end
 
 function startHarwesting()
    local col
-   for row = 1,colSize do
+   for col=1,colSize do
       refuel()
       forward()
       chooseDirection()
