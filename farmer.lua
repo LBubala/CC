@@ -25,9 +25,9 @@ function forward(n)
          if data.name == "minecraft:wheat" and data.state.age == 7 then
             turtle.digDown()
             turtle.placeDown()
-         else
-            turtle.placeDown()
          end
+      else
+         turtle.placeDown()
       end
       turtle.forward()
    end
